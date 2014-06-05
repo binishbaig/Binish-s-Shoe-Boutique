@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="row">
+    <div class="panel large-4 columns"><a href="{{ url_for('product1') }}">Product #1</a></div>
+    <div class="panel large-4 columns"><a href="{{ url_for('product2') }}">Product #2</a></div>
+    <div class="panel large-4 columns"><a href="{{ url_for('product3') }}">Product #3</a></div>
+  </div>
+  <div class="row">
+    <div class="panel large-4 columns">Product #4</div>
+    <div class="panel large-4 columns">Product #5</div>
+    <div class="panel large-4 columns">Product #6</div>
+  </div>
+  <div class="row">
+    <div class="panel large-4 columns">Product #7</div>
+    <div class="panel large-4 columns">Product #8</div>
+    <div class="panel large-4 columns"><a href="{{ url_for('product9') }}">Product #9</a></div>
+  </div>
+{% endblock %}

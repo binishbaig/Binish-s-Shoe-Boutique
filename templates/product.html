@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="row">
+    <div class="large-6 large-centered columns">
+        <h1>{{ product.name }}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-5 columns">
+        <img src="{{ product.image }}" />
+    </div>
+    <div class="large-7 columns">
+        <p>{{ product.description }}</p>
+      </div>
+    </div>
+
+  <div class="row">
+      {% if product.id > 1 %}
+      <div class=" panel large-3 columns"><a href="/product/{{product.id-1}}">Previous</a></div>
+      {% else %}
+      <div class=" large-3 columns"></div>
+      {% endif %}
+      {% if product.id < 9 %}
+      <div class=" panel large-3 columns"><a href="/product/{{product.id+1}}">Next</a></div>
+      {% endif %}
+    </div>
+
+{% endblock %}
